@@ -23,13 +23,47 @@
   </head>
 
   <body>
+    <!-- header info -->
     <header class="jumbotron ">
+      <!-- centered text -->
       <h1 class="display-3 d-flex justify-content-center">Work Day Scheduler</h1>
+      <!-- centered text -->
       <p class="lead d-flex justify-content-center">A simple calendar app for scheduling your work day</p>
+      <!-- centered spot for date which is filled by js -->
       <p id="currentDay" class="lead"></p>
     </header>
+
+    <!-- container for the hourly timeslots -->
     <div class="container">
-      <!-- Timeblocks go here -->
+
+      <!-- row for a specific hour -->
+      <div class="input-group row">
+        <!-- hour portion of row -->
+        <div class="input-group-prepend">
+          <span class="hour">9AM</span>
+        </div>
+        <!-- input portion of row -->
+        <textarea type="text" class="form-control description" aria-label="Description"></textarea>
+        <!-- button portion of row -->
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+
+      <!-- row for a specific hour -->
+      <div class="input-group row">
+        <!-- hour portion of row -->
+        <div class="input-group-prepend">
+          <span class="hour">10AM</span>
+        </div>
+        <!-- input portion of row -->
+        <textarea type="text" class="form-control description" aria-label="Description"></textarea>
+        <!-- button portion of row -->
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary saveBtn" type="button">Save</button>
+        </div>
+      </div>
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
