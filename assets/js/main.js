@@ -26,10 +26,14 @@ for( i=0; i<allTimeBlocks.length; i++){
     }
 }
 
-for( i=0; i<allSaveButtons.length; i++){
+for( let i=0; i<allSaveButtons.length; i++){
     console.log(allSaveButtons[i].id);
+    allSaveButtons[i].onclick = function(){
+    console.log(allTimeBlocks[i].value)
+    localStorage.setItem("text" + [i], allTimeBlocks[i].value)
+    };
 }
 
-allSaveButtons[0].addEventListener("click", function(event){
-    console.log(allTimeBlocks[0].value)
-});
+for( i=0; i<allTimeBlocks.length; i++){
+    allTimeBlocks[i].value = localStorage.getItem("text" + [i])
+}
