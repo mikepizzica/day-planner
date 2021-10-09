@@ -1,39 +1,37 @@
-// current date at top of page
+// declare date on page load as a variable and print to page
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
-console.log(moment().hours());
+// delcare the hour on page load as a variable
 var currentHour = moment().hours();
 
+// declare the array of textareas as a variable
 var allTimeBlocks = document.querySelectorAll("textarea");
+
+// declare the array of buttons as a variable
 var allSaveButtons = document.querySelectorAll("button");
 
-// console.log(allTimeBlocks);
-
+// add classes to hours based on relation to current hour so we can style them in color-coded fashion using CSS
 for( i=0; i<allTimeBlocks.length; i++){
-    console.log(allTimeBlocks[i].id);
     if(parseInt(allTimeBlocks[i].id) < currentHour){
-        // allTimeBlocks[i].className+=" past";
         allTimeBlocks[i].classList.add("past");
     }
     else if(parseInt(allTimeBlocks[i].id) === currentHour){
-        // allTimeBlocks[i].className+=" past";
         allTimeBlocks[i].classList.add("present");
     }
     else{
-        // allTimeBlocks[i].className+=" past";
         allTimeBlocks[i].classList.add("future");
     }
 }
 
+// set textarea contents to local storage on "Save" button click
 for( let i=0; i<allSaveButtons.length; i++){
-    console.log(allSaveButtons[i].id);
     allSaveButtons[i].onclick = function(){
-    console.log(allTimeBlocks[i].value)
     localStorage.setItem("text" + [i], allTimeBlocks[i].value)
     };
 }
 
+// get textarea contents from local storage on page load
 for( i=0; i<allTimeBlocks.length; i++){
     allTimeBlocks[i].value = localStorage.getItem("text" + [i])
 }

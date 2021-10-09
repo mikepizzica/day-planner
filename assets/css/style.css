@@ -24,10 +24,7 @@ textarea {
   border-bottom: 10px solid black;
 }
 
-/* styling for descriptions */
-.description {
-  white-space: pre-wrap;
-}
+
 
 /* styling for time blocks */
 .time-block {
