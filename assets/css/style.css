@@ -1,9 +1,11 @@
+/* styling for body */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
+/* default styling for text areas */
 textarea {
   background: transparent;
   border: none;
@@ -13,6 +15,7 @@ textarea {
   padding: 10px;
 }
 
+/* styling for top of page */
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -21,42 +24,50 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+/* styling for descriptions */
 .description {
   white-space: pre-wrap;
 }
 
+/* styling for time blocks */
 .time-block {
   text-align: center;
   border-radius: 15px;
 }
 
+/* styling for each hour row */
 .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
 }
 
+/* styling for hours on left side of page */
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
 }
 
+/* styling for text area of past hours */
 .past {
   background-color: #d3d3d3;
   color: black;
 }
 
+/* styling for text area of current hour */
 .present {
   background-color: #ff6961;
   color: black;
 }
 
+/* styling for text area of future hours */
 .future {
   background-color: #77dd77;
   color: black;
 }
 
+/* save button styling */
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -65,11 +76,13 @@ textarea {
   color: white;
 }
 
+/* save button hover effect */
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
 
+/* span tag styling for hours on left side of page */
 span {
   width:70px;
   text-align: right;
