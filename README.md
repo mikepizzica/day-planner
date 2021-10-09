@@ -1,6 +1,6 @@
 # Day Planner
 ## Description
-
+The purpose of this project was to create a day planner for the current day.
 
 ## User Story
 ```
@@ -30,3 +30,4 @@ THEN the saved events persist
 https://mikepizzica.github.io/day-planner/
 
 ## Screenshot
+![Screenshot of day planner](./assets/images/screenshot-day-planner.png)
